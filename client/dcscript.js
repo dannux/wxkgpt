@@ -32,7 +32,7 @@ function typeText(element, text) {
   let interval = setInterval(() => {
     // check if AI still typing
     if (index < text.length) {
-      element.innerHTML += text.chartAt(index);
+      element.innerHTML += text.charAt(index);
       index++;
     } else {
       clearInterval(interval);
@@ -58,7 +58,7 @@ function chatStripe(isAi, value, uniqueId) {
     `
       <div class="wrapper ${isAi && 'ai'}">
         <div class="chat">
-          <div className="profile">
+          <div class="profile">
             <img
               src=${isAi ? bot : user}
               alt="${isAi ? 'bot' : 'user'}"
